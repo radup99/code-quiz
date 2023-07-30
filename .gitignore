@@ -1,0 +1,4 @@
+CodeQuizApi/bin
+CodeQuizApi/obj
+CodeQuizApi/WeatherForecast.cs
+CodeQuizApi/Controllers/WeatherForecastController.cs
