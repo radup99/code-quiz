@@ -1,3 +1,5 @@
+using CodeQuizApi.Database;
+
 namespace CodeQuizApi
 {
     public class Program
@@ -8,6 +10,7 @@ namespace CodeQuizApi
 
             // Add services to the container.
 
+            builder.Services.AddDbContext<MainDbContext>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
