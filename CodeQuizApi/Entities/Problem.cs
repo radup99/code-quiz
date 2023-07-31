@@ -1,4 +1,6 @@
-﻿namespace CodeQuizApi.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CodeQuizApi.Entities
 {
     public class Problem
     {
@@ -8,12 +10,11 @@
 
         public string Title { get; set; }
 
-        public string Text { get; set; }
+        public string ProblemText { get; set; }
 
-        public string InputDetails { get; set; }
+        public string InOutDataString { get; set; }
 
-        public string OutputDetails { get; set; }
-
+        [NotMapped]
         public List<InOutData> InOutDataList { get; set; }
     }
 }
