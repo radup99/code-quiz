@@ -13,7 +13,7 @@ namespace CodeQuizApi.Services
             _problemRepository = problemRepository;
         }
 
-        public async Task<ProblemGetResponseModel> getById(int id)
+        public async Task<ProblemGetResponseModel> GetById(int id)
         {
             var problem = await _problemRepository.GetById(id);
             var responseProblem = new ProblemGetResponseModel(problem);

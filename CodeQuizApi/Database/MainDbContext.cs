@@ -8,14 +8,9 @@ namespace CodeQuizApi.Database
     {
         public DbSet<Problem> Problems { get; set; }
 
-        public MainDbContext()
-        {
-            Database.EnsureCreated();
-        }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=Database.db");
+            optionsBuilder.UseSqlite(@"Data Source=data.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
