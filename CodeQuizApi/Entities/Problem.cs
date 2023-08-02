@@ -20,6 +20,8 @@ namespace CodeQuizApi.Entities
         [NotMapped]
         public List<InOutData> InOutDataList { get; set; }
 
+        public Problem() {}
+
         public Problem(ProblemPostRequestModel postRec)
         {
             this.AuthorId = EntityConstants.DefaultAuthorId;
