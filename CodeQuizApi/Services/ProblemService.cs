@@ -19,5 +19,11 @@ namespace CodeQuizApi.Services
             var responseProblem = new ProblemGetResponseModel(problem);
             return responseProblem;
         }
+
+        public async Task AddProblem(ProblemPostRequestModel postReq)
+        {
+            var problem = new Problem(postReq);
+            await _problemRepository.Add(problem);
+        }
     }
 }

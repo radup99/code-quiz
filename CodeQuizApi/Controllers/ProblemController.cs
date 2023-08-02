@@ -27,5 +27,11 @@ namespace CodeQuizApi.Controllers
         {
             return await _problemService.GetById(id);
         }
+
+        [HttpPost(Name = "Post")]
+        public async Task Post(ProblemPostRequestModel postReq)
+        {
+            await _problemService.AddProblem(postReq);
+        }
     }
 }
