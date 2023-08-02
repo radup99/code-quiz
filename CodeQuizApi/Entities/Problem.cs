@@ -1,9 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using CodeQuizApi.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CodeQuizApi.Entities
 {
     public class Problem
     {
+        [Key]
         public int Id { get; set; }
 
         public string AuthorId { get; set; }
@@ -16,5 +19,13 @@ namespace CodeQuizApi.Entities
 
         [NotMapped]
         public List<InOutData> InOutDataList { get; set; }
+
+        public Problem(ProblemPostRequestModel postRec)
+        {
+            this.AuthorId = EntityConstants.DefaultAuthorId;
+            this.Title = postRec.Title;
+            this.Text = postRec.Text;
+            this.InOutDataString = postRec.InOutDataString;
+        }
     }
 }
