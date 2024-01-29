@@ -1,0 +1,6 @@
+@CodeQuizApi_HostAddress = http://localhost:5224
+
+GET {{CodeQuizApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
