@@ -6,8 +6,8 @@ namespace CodeQuizApi.Repositories
 {
     public class ProblemRepository : IRepository<Problem>
     {
-        private MainDbContext _context;
-        private DbSet<Problem> _dbset;
+        private readonly MainDbContext _context;
+        private readonly DbSet<Problem> _dbset;
 
         public ProblemRepository(MainDbContext context)
         {
@@ -15,7 +15,7 @@ namespace CodeQuizApi.Repositories
             _dbset = context.Set<Problem>();
         }
 
-        public async Task<Problem> GetById(int id)
+        public async Task<Problem?> GetById(int id)
         {
             return await _context.Problems.FindAsync(id);
         }
