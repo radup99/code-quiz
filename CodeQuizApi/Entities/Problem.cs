@@ -18,7 +18,7 @@ namespace CodeQuizApi.Entities
         public string InOutDataString { get; set; }
 
         [NotMapped]
-        public List<InOutData> InOutDataList { get; set; }
+        public List<(string input, string output)> InOutDataList { get; set; }
 
         public Problem() { }
 
