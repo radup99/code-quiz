@@ -22,7 +22,7 @@ namespace CodeQuizApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("InOutDataString")
+                    b.Property<string>("InOutData")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

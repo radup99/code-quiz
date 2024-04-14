@@ -15,10 +15,7 @@ namespace CodeQuizApi.Entities
 
         public string Text { get; set; }
 
-        public string InOutDataString { get; set; }
-
-        [NotMapped]
-        public List<(string input, string output)> InOutDataList { get; set; }
+        public string InOutData { get; set; }
 
         public Problem() { }
 
@@ -26,7 +23,7 @@ namespace CodeQuizApi.Entities
         {
             this.Title = crProblem.Title;
             this.Text = crProblem.Text;
-            this.InOutDataString = crProblem.InOutDataString;
+            this.InOutData = crProblem.InOutData;
         }
     }
 }

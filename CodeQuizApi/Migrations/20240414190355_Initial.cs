@@ -18,7 +18,7 @@ namespace CodeQuizApi.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
                     Text = table.Column<string>(type: "TEXT", nullable: false),
-                    InOutDataString = table.Column<string>(type: "TEXT", nullable: false)
+                    InOutData = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

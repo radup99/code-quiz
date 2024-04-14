@@ -37,7 +37,7 @@ namespace CodeQuizApi.Repositories
             var problem = this.GetById(id).Result;
             problem.Title = updatedProblem.Title;
             problem.Text = updatedProblem.Text;
-            problem.InOutDataString = updatedProblem.InOutDataString;
+            problem.InOutData = updatedProblem.InOutData;
             await _context.SaveChangesAsync();
         }
     }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodeQuizApi.Migrations
 {
     [DbContext(typeof(MainDbContext))]
-    [Migration("20240201150359_Initial")]
+    [Migration("20240414190355_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace CodeQuizApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("InOutDataString")
+                    b.Property<string>("InOutData")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

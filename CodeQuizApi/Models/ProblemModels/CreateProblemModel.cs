@@ -9,7 +9,7 @@ namespace CodeQuizApi.Models.ProblemModels
 
         public string Text { get; set; }
 
-        public string InOutDataString { get; set; }
+        public string InOutData { get; set; }
 
     }
 }
